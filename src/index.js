@@ -1,9 +1,14 @@
-// var http = require("http");
+const { prisma } = require("./generated/prisma-client");
 
-// //create a server object:
-// http
-//   .createServer(function(req, res) {
-//     res.write("Hello World!"); //write a response to the client
-//     res.end(); //end the response
-//   })
-//   .listen(8080); //the server object listens on port 8080
+// A `main` function so that we can use async/await
+async function main() {
+  // Create a new user called `Alice`
+  const newUser = await prisma.createUser({ name: "jijothic" });
+  console.log(`Created new user: ${newUser.name} (ID: ${newUser.id})`);
+
+  // Read all users from the database and print them to the console
+  const allUsers = await prisma.users();
+  console.log(allUsers);
+}
+
+main().catch(e => console.error(e));

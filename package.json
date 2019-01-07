@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon src/index.js localhost 8080"
   },
-  "dependencies": {},
+  "dependencies": {
+    "prisma-client-lib": "1.23.2"
+  },
   "devDependencies": {
     "nodemon": "1.18.4"
   }
