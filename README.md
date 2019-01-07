@@ -1,2 +1,0 @@
-# mpesagraphql
-Created with CodeSandbox
