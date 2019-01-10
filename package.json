@@ -4,7 +4,8 @@
   "description": "Simple Node Sandbox",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js localhost 8080"
+    "start": "nodemon src/index.js localhost 8080",
+    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
