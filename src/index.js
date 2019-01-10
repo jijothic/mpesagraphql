@@ -1,14 +1,16 @@
-const { prisma } = require("./generated/prisma-client");
+import express from 'express';
+import bodyParser from 'body-parser';
 
-// A `main` function so that we can use async/await
-async function main() {
-  // Create a new user called `Alice`
-  const newUser = await prisma.createUser({ name: "jijothic" });
-  console.log(`Created new user: ${newUser.name} (ID: ${newUser.id})`);
+const app = express(); // create an instance of express
 
-  // Read all users from the database and print them to the console
-  const allUsers = await prisma.users();
-  console.log(allUsers);
-}
+const PORT = process.env.PORT || 3000; // create the port
 
-main().catch(e => console.error(e));
+app.use(bodyParser.json()); // add body-parser as the json parser middleware
+
+app.listen(PORT, err => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(`App listen on port: ${PORT}`);
+  }
+});
