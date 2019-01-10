@@ -9,17 +9,17 @@ mongoose.Promise = global.Promise;
 mongoose.set('debug', true); // debug mode on
 
 try {
-  mongoose.connect(constants.DB_URL, {
-    useMongoClient: true,
-  });
+    mongoose.connect(constants.DB_URL, {
+        useMongoClient: true,
+    });
 } catch (err) {
-  mongoose.createConnection(constants.DB_URL, {
-    useMongoClient: true,
-  });
+    mongoose.createConnection(constants.DB_URL, {
+        useMongoClient: true,
+    });
 }
 
 mongoose.connection
-  .once('open', () => console.log('MongoDB Running'))
-  .on('error', e => {
-    throw e;
-  });
+    .once('open', () => console.log('MongoDB Running'))
+    .on('error', e => {
+        throw e;
+    });
