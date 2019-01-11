@@ -11,4 +11,8 @@ export default `
   schema {
     query: Query
   }
+
+  type Mutaton {
+    createb2b(text: String!)
+  }
 `;
