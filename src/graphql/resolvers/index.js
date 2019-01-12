@@ -1,7 +1,16 @@
-import B2CResolvers from './b2c-resolver';
+import GraphQLDate from 'graphql-date';
+
+import TweetResolvers from './tweet-resolvers';
 
 export default {
+  Date: GraphQLDate,
   Query: {
-    getB2c: B2CResolvers.getB2c
+    getTweet: TweetResolvers.getTweet,
+    getTweets: TweetResolvers.getTweets,
+  },
+  Mutation: {
+    createTweet: TweetResolvers.createTweet,
+    updateTweet: TweetResolvers.updateTweet,
+    deleteTweet: TweetResolvers.deleteTweet
   }
-}
+};
