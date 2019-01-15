@@ -9,7 +9,7 @@ export default {
     }),
     updateTweet: (_, {
         _id,
-        ...rest
+        ... rest
     }) => Tweet.findByIdAndUpdate(_id, rest, {
         new: true
     }),
