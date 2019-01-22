@@ -58,4 +58,4 @@ export default {
             throw error;
         }
     },
-};
+};  
