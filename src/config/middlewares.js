@@ -18,6 +18,7 @@ const schema = makeExecutableSchema({
     typeDefs,
     resolvers,
 });
+ 
 
 async function auth(req, res, next) {
     try {
