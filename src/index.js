@@ -1,3 +1,4 @@
+/* eslint-disable no-consol */
 import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
