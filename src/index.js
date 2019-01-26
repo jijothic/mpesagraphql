@@ -17,7 +17,7 @@ app.use(
   graphiqlExpress({
     endpointURL: constants.GRAPHQL_PATH,
   }),
-);
+); 
 
 app.use(
   constants.GRAPHQL_PATH,
