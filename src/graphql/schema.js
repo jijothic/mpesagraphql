@@ -9,9 +9,9 @@ type User {
     updatedAt: Date!
   },
   type Mutation {
-    createTweet(text: String!): Tweet
-    updateTweet(_id: ID!, text: String): Tweet
-    deleteTweet(_id: ID!): Status
+    createPayment(text: String!): Payment
+    updatePayment(_id: ID!, text: String): Payment
+    deletePayment(_id: ID!): Status
     signup(email: String!, fullName: String!, password: String!, avatar: String, username: String): User
     login(email: String!, password: String!): User
   }
