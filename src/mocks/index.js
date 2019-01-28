@@ -1,17 +1,17 @@
 import faker from 'faker';
 
-import Tweet from '../models/Tweet';
+import Payment from '../models/Payment';
 
-const TWEETS_TOTAL = 10;
+const PAYMENTS_TOTAL = 10;
 
 export default async () => {
     try {
-        await Tweet.remove();
+        await Payment.remove();
 
         await Array.from({
-            length: TWEETS_TOTAL
+            length: PAYMENTS_TOTAL
         }).forEach(async () => {
-            await Tweet.create({
+            await Payment.create({
                 text: faker.lorem.paragraphs(1),
             })
         });
