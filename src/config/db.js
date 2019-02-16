@@ -17,7 +17,7 @@ try {
         useMongoClient: true,
         
     });
-}
+} 
 
 mongoose.connection
     .once('open', () => console.log('MongoDB Running'))
