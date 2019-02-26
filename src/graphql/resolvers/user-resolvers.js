@@ -50,7 +50,7 @@ export default {
 
     me: async (_, args, {
         user
-    }) => {
+    }) => { 
         try {
             const me = await requireAuth(user);
             return me;
