@@ -14,6 +14,10 @@ export async function requireAuth(user) {
         throw new Error('Unauthorized');
     }
 
+    if (!me) {
+        throw new Error('Unau ')
+    }
+
     return me;
 }
 
@@ -26,3 +30,5 @@ export function decodeToken(token) {
 
     throw new Error('Token not valid!');
 }
+
+// PHYLLIS WARAU NJUGUNA	PHYLLIS WARAU NJUGUNA	101902274404
