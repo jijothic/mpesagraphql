@@ -9,6 +9,7 @@ import './config/db';
 import constants from './config/constants';
 import typeDefs from './graphql/schema';
 import resolvers from './graphql/resolvers';
+import { ifError } from 'assert';
 
 app.use(bodyParser.json());
 
@@ -26,10 +27,10 @@ app.use(
   }),
 );
 
-graphQLServer.listen(constants.PORT, err => {
+graphiqlServer.listen(constants.PORT, err =>{
   if (err) {
     console.error(err);
   } else {
-    console.log(`App running on port: ${constants.PORT}`);
+    console.log(`App runnning on port: ${constants.PORT}`);
   }
 });
