@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "graphql-tools": "^4.0.3",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.3",
+    "mongoose": "^5.7.5",
     "prisma-client-lib": "1.23.2"
   },
   "devDependencies": {
