@@ -14,7 +14,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "graphql-tools": "^4.0.3",
-    "jsonwebtoken": "^8.4.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.4.3",
     "prisma-client-lib": "1.23.2"
   },
